@@ -1,0 +1,215 @@
+
+#tb1 img{
+	/*width: 200px; */
+}
+
+
+
+
+#showMsg0{
+    width: 700px;
+    height: 200px;
+    border: 2px;
+    position: absolute;
+    left:600px;
+    top: 250px;
+    border-top:1px solid #000;
+}
+#showMsg1{
+    width: 700px;
+    height: 200px;
+    border: 2px;
+    position: absolute;
+    left:600px;
+    top: 250px;
+
+    border-top:1px solid #000;
+}
+
+.msg_detial td{
+    border-bottom:1px solid #000;
+    border-right:1px solid #000;
+    text-align: left;
+}
+
+#im0{
+    width:520px;
+    border-style:solid; border-width:1px; border-color:#aaa;
+    position: absolute;
+    left: 20px;
+    top: 250px;
+    z-index: 1;
+}
+#im1{
+    width:520px;
+    border-style:solid; border-width:1px; border-color:#aaa;
+    position: absolute;
+    left: 20px;
+    top: 250px;
+    z-index: 1;
+}
+
+
+.headSpace{
+    height: 40px;
+    text-align: center;
+    font-size: 2px;
+}
+
+
+.select-control-all a{
+    height: 50px;
+    width: 160px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.person{
+
+}
+.select-control{
+    height: 50px;
+    width: 1350px;
+    /* background-color: rgba(74,167,110,0.93); */
+    border-top:3px solid green;
+    /*border-bottom:2px dashed #F00; */
+    border-bottom:3px solid green;
+    border-left:3px solid green;
+    border-right:3px solid green;
+}
+.select-control-all{
+    height: 50px;
+    margin: auto;
+}
+
+
+
+.select-control-all dt{
+    background-color: rgba(161,187,214,0.35);
+    font-size: 15px;
+    height: 70px;
+}
+
+
+.select-control-all-source dl{
+    display: none;
+    margin-top: -0px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.select-control-all-source:hover dl{
+    display: block;
+}
+.select-control-all-source dl dt{
+    border-bottom: solid #000 1px;
+}
+
+.select-control-all-GPGR dl{
+    display: none;
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.select-control-all-GPGR:hover dl{
+    display: block;
+}
+.select-control-all-GPGR dl dt{
+    border-bottom: solid #000 1px;
+}
+
+.select-control-all-JXPY dl{
+    display: none;
+    margin-top: 0px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.select-control-all-JXPY:hover dl{
+    display: block;
+}
+.select-control-all-JXPY dl dt{
+    border-bottom: solid #000 1px;
+}
+
+.select-control-all-JDGR dl{
+    display: none;
+    margin-top: -0px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.select-control-all-JDGR:hover dl{
+    display: block;
+}
+.select-control-all-JDGR dl dt{
+    border-bottom: solid #000 1px;
+}
+
+
+
+.select-control-all-main{
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.select-control-all-source{
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.select-control-all-GPGR{
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+.select-control-all-JXPY{
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+.select-control-all-JDGR{
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+.select-control-all-exe{
+    height: 50px;
+    width: 160px;
+    line-height: 50px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+
+
+
+
+.select-control-all{
+    text-align: center;
+    font-size: 18px;
+}
+.showImg{
+    text-align: center;
+    font-size: 2px;
+}

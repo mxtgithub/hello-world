@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mapper.EcgMapper">
+ <resultMap id="ecgSet"  type="com.dto.Ecg" >
+        <id column="ecg_id" property="ecgId" />
+        <result column="idNumber" property="idNumber" />
+         <result column="ecg_data" property="ecgData" />
+          <result column="createDate" property="createDate" />
+        <result column="createdBy" property="createdBy" />
+        <result column="community" property="community" />
+        <result column="doctor" property="doctor" />
+        <result column="doctorNumber" property="doctorNumber" />
+        <result column="ecg_attribute" property="ecgAttribute" />
+  </resultMap>
+   <select id="getAll"  parameterType="com.dto.Ecg" resultMap="ecgSet">
+   select * from ecg where 1=1 
+  and  idNumber = #{idNumber} 
+  order by ecg_id  limit #{cursor},10
+   </select>
+   
+    <insert id="insertEcg" parameterType="com.dto.Ecg" >
+   insert into ecg
+   (idNumber,ecg_data,createDate,createdBy,community,doctor,ecg_attribute) 
+   values
+   (#{idNumber},#{ecgData},#{createDate},
+   #{createdBy},#{community},#{doctor},#{ecgAttribute});
+   </insert>
+   
+    <!-- 查出来一条ecg -->
+      <select id="selectOneEcg"  parameterType="int" resultMap="ecgSet">
+  select * from ecg where 1=1 
+   and ecg_id = #{ecgId}
+  </select>
+  
+  <delete  id="delete"  parameterType="int" >
+   delete  from ecg  where ecg_id = #{ecgId};
+   </delete>
+
+ <!-- 修改个人信息 -->
+     <update id="update"  parameterType="com.dto.Ecg">
+    update ecg set createDate=#{createDate},doctor=#{doctor}
+	,community=#{community},createdBy=#{createdBy},ecg_attribute=#{ecgAttribute}
+	 where ecg_id = #{ecgId} ;
+   </update>
+ 
+</mapper>
