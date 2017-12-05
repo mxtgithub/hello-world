@@ -24,6 +24,7 @@ public class ServerThread implements Runnable {
 		String heart = listGSuper.get(0);//心率
 		String realtime = listGSuper.get(1);//时间
 		//在服务端输出数据
+		System.out.println("listGSuper:"+listGSuper);
 		System.out.println("heart:"+heart);
 		System.out.println("realtime:"+realtime);
 		//对解析到的子字符串进行分割
