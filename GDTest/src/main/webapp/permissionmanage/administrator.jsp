@@ -97,7 +97,7 @@
 				</td>
 				<tr>
 				<td>
-				高级管理员编号
+				管理员编号
 				<select name="a_id">
 						<option>1
 						<option selected>2

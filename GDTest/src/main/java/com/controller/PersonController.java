@@ -2,6 +2,7 @@ package com.controller;
 
 import java.io.File;
 import java.net.URLDecoder;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,17 +23,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.dto.Baseinfo;
 import com.dto.Ecg;
 import com.dto.Person;
 import com.dto.Result;
+import com.service.BaseinfoService;
 import com.service.PersonService;
 
 
 
 @Controller
-public class PersonController {
+public class PersonController extends BaseController{
 	@Autowired
 	PersonService personService;
+	@Autowired
+	BaseinfoService baseinfoService;
 	
 	//显示所属患者信息
 	@RequestMapping("/getPersonR")
@@ -284,6 +289,62 @@ public class PersonController {
 		 public String noSavePerson(){
 			 return "first";
 		 }
+		 
+	// 查询列表
+	@RequestMapping("/queryBaseinfoList")
+	public @ResponseBody Map<String, Object> queryList() {
 
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		try {
+
+			Baseinfo baseinfo = new Baseinfo();
+			baseinfo.setCursor((pageNo-1)*10);
+			List<Baseinfo>  list = baseinfoService.getAll(baseinfo);		
+			map.put("list",baseinfoService.getAll(baseinfo));
+			//request.setAttribute("page", page);
+
+			map.put("result", "success");
+			map.put("pageNo", pageNo);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+			map.put("result", "error");
+			map.put("errorCode", "9999");
+			map.put("errorMsg", "查询列表失败！         错误原因：" + e.getMessage());
+		}
+
+		return map;
+	}
+	
+	//查询baseinfo信息
+	@RequestMapping("/queryBaseinfo")
+	public @ResponseBody Map<String, Object> queryBaseinfo() {
+
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		try {
+
+			Baseinfo baseinfo = new Baseinfo();
+			baseinfo.setId(Integer.parseInt(request.getParameter("id")));
+			baseinfo.setCursor((pageNo-1)*10);
+			List<Baseinfo>  list = baseinfoService.getAll(baseinfo);		
+			map.put("list",baseinfoService.getAll(baseinfo));
+			//request.setAttribute("page", page);
+
+			map.put("result", "success");
+			map.put("pageNo", pageNo);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+			map.put("result", "error");
+			map.put("errorCode", "9999");
+			map.put("errorMsg", "查询失败！         错误原因：" + e.getMessage());
+		}
+
+		return map;
+	}
 }
 

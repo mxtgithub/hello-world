@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/GDTest/css/person.css" />
 <title>修改用户信息</title>
 <script type="text/javascript">
 	function checkForm(){
@@ -45,19 +46,21 @@
 		 }
 	}
 </script>
-<link rel="stylesheet" type="text/css" href="css/person.css">
+<link rel="stylesheet" type="text/css" href="/GDTest/css/person.css" />
 </head>
 <body>
-<h2>修改用户信息</h2>
+<fieldset>
+	    <legend>修改用户信息</legend>
 	<div>
-			&nbsp;档案编号：&nbsp;<input type="text" id="s_userName" size="20" onkeydown="if(event.keyCode==13) searchUser()"/>
+			&nbsp;<!-- 档案编号：&nbsp;<input type="text" id="s_userName" size="20" onkeydown="if(event.keyCode==13) searchUser()"/>
 			<a href="javascript:searchUser()" class="easyui-linkbutton" iconCls="icon-search" plain="true">搜索</a>
-
+	</div>
+	<div><th>操作</th>
 			<a href="javascript:openUserAddDialog()" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
 			<a href="javascript:openUserModifyDialog()" class="easyui-linkbutton" iconCls="icon-edit" plain="true">修改</a>
 			<a href="javascript:deleteUser()" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
-		</div>	
-	<div id="dlg" class="easyui-dialog" style="width: 570px;height:300px;padding: 10px 20px"
+		 --></div>	
+<!-- 	<div id="dlg" class="easyui-dialog" style="width: 570px;height:300px;padding: 10px 20px"
 	  closed="true" buttons="#dlg-buttons">
 	 	<form id="fm" method="post">
 	 		<table cellspacing="8px">
@@ -103,14 +106,14 @@
 	 			</tr>
 	 		</table>
 	 	</form>
-	</div>
+	</div> -->
 
 <div class="manage" >
 	<form action="user_save.action" method="post" onsubmit="return checkForm()">
 		<table class="form">
 			<tr>
 				<td class="field">档案编号：</td>
-				<td><input type="text" class="text" name="user.userName"   value="${user.userName }" readonly="readonly" /></td>
+				<td><input type="text" class="text"  id="trueName" name="user.trueName" value="${user.trueName }" /></td>
 			</tr>
 			<tr>
 				<td class="field">姓名：</td>
@@ -152,11 +155,21 @@
 				<td class="field">家庭住址：</td>
 				<td><input type="text" class="text"  id="address" name="user.address" value="${user.address }" /></td>
 			</tr>
-			
+	
 			<tr>
 				<td class="field">密码：</td>
 				<td><input class="text" type="text" id="email" name="user.email"  value="${user.email}" /></td>
-			</tr>
+			</tr> 
+			<tr>
+				<td class="field">确认密码：</td>
+				<td><input class="text" type="text" id="email" name="user.email"  value="${user.email}" /></td>
+			</tr> 
+			<td class="field">验证码：</td>
+				<td><input  class="text" style="width: 80px;margin-right: 10px;"
+					type=text value="${imageCode }" name="imageCode" id="imageCode">
+					<img onclick="javascript:loadimage();" title="换一张试试" name="randImage"
+					id="randImage" src="checkcode.jsp" width="60" height="20" border="1"
+					align="absmiddle"></td>
 			<tr>
 				<td>
 				    <input type="hidden"  name="user.id" value="${user.id }"/>
@@ -166,12 +179,9 @@
 				 &nbsp; <label class="ui-blue"><input type="submit" name="submit" value="保存" /></label>
 			     &nbsp; <label class="ui-blue"><input type="submit" name="submit" value="关闭" /></label></td>
 			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td><font id="error" color="red"></font> </td>
-			</tr>
 		</table>
 	</form>
+	</fieldset>
 </div>
 </body>
 </html>

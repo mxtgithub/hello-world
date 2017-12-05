@@ -23,17 +23,15 @@
   </head>
   
   <body>
-  &nbsp; 
-		修改密码 
-		<br />
-		<br />
+		
 
 
 
 
 		<form  name="form" action="ModifyDpassWord" method="post">
 	    
-	    
+	    <fieldset>
+	    <legend>修改密码</legend>
 			&nbsp;旧密码&nbsp;&nbsp;：
 			<input type="text" name="oldpw">
 			<br>
@@ -51,6 +49,6 @@
 			<input type="reset" value="重置">
 		 
 		</form>
-
+</fieldset>
   </body>
 </html>

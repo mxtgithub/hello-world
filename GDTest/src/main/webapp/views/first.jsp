@@ -58,20 +58,20 @@
 
 <a href="<%=request.getContextPath()%>/healthy"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black" >健康档案管理</font></a>		
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="personhealthy.jsp"><font color = "black">个人健康档案</font></a>
+<a href="<%=request.getContextPath()%>/views/personhealthy.jsp"><font color = "black">个人健康档案</font></a>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/getPersonR"><font color = "black">家庭健康档案</font></a><br>
+<a href="<%=request.getContextPath()%>/views/familyhealthy.jsp"><font color = "black">家庭健康档案</font></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/getPersonR"><font color = "black">儿童健康档案</font></a><br>
+<a href="<%=request.getContextPath()%>/views/childhealthy.jsp"><font color = "black">儿童健康档案</font></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/getPersonR"><font color = "black">孕产妇健康档案</font></a><br>
+<a href="<%=request.getContextPath()%>/views/pregnancyhealthy.jsp"><font color = "black">孕产妇健康档案</font></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/system"><font color = "black">老年人健康档案</font></a><br>
+<a href="<%=request.getContextPath()%>/views/olderhealthy.jsp"><font color = "black">老年人健康档案</font></a><br>
 
 
 <a href="<%=request.getContextPath()%>/protect"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black">健康监测管理</font></a>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">数据通信</font></a>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">实时监测</font></a><br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="communication.jsp"><font color = "black">实时监测</font></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">诊断预防</font></a><br>
 
 <a href="<%=request.getContextPath()%>/select"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black">数据信息管理</font></a>
@@ -85,14 +85,14 @@
 <a href="<%=request.getContextPath()%>/getPersonR"><font color = "black">用户数据处理</font></a><br>
 <a href="<%=request.getContextPath()%>/slow"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black">慢性病管理</font></a>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="<%=request.getContextPath()%>/system"><font color = "black">高血压</font></a>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">糖尿病</font></a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">心脏病</font></a><br>
+<a href="<%=request.getContextPath()%>/views/bloodmanage.jsp"><font color = "black">高血压</font></a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/views/sugarmanage.jsp"><font color = "black">糖尿病</font></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/views/heartmanage.jsp"><font color = "black">心脏病</font></a><br>
 
 <a href="<%=request.getContextPath()%>/system"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black">系统用户管理</font></a>
 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="views/melogin.jsp"><font color = "black">用户登录</font></a>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="views/register.jsp"><font color = "black">用户注册</font></a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="melogin.jsp"><font color = "black">用户登录</font></a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.jsp"><font color = "black">用户注册</font></a><br>
 <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="views/administrator.jsp"><font color = "black">用户权限管理</font></a><br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->	
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">用户权限管理</font></a><br>

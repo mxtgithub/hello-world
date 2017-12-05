@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.service.PersonService;
 
 @Controller
-public class LoginController {
+public class LoginController extends BaseController{
 	    @Autowired
 		PersonService personService;
 	
@@ -29,6 +29,9 @@ public class LoginController {
 					
 					 model.addAttribute("idNumber", idNumber);
 					 model.addAttribute("name", name);
+					 
+					 session.setAttribute("name", name);
+						
 					return "first";
 				}else{
 					return "melogin";

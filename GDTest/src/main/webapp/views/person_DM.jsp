@@ -48,7 +48,7 @@
    <th> <input  id="txt" size="10" value="${tom.telNumber}" style="border-style:none"  readonly/></th>
    <th> <input  id="txt" size="36" value="${tom.address}" style="border-style:none" readonly/></th>
    <th> <input  id="txt" size="20" value="${tom.attribute}" style="border-style:none" readonly/></th>
-  <th >
+  <th>
   
  <a href="<%=request.getContextPath() %>/getEcg/${tom.idNumber}">
 <input type="button" value="查询"/></a>
