@@ -31,7 +31,7 @@ public class ServerThread implements Runnable {
 		// 采集到的心率
 		String hea[] = heart.split("/");
 		for (int i = 0; i < hea.length; i++) {
-			heart.add(hea[i]);
+			heart.add(hea[i]); 
 		}
 		// 采集到的时间
 		String rea[] = realtime.split("/");
