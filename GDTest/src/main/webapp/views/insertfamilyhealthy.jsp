@@ -78,19 +78,29 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
 </head>
 <body>
 <center><a href="/GDTest/views/personhealthy.jsp">返回</a><h3 style="margin-top: 80px;">新增家庭健康档案</h3>
+	<fieldset width="">
+	    <legend>新增家庭健康档案</legend>
+	    <table  border="0" >
+ <tr>
+ <!-- <td width="" height="">
 	<table>
-			<tr>
+			 --><tr>
 				<td>用户名</td>
 				<td><input id="userName"></td>
-				<td>身份</td>
+				<td>身&nbsp;&nbsp;&nbsp;份</td>
 				<td><input id="identity"></td>
+				
 			</tr>
 			<tr>
-				<td>真实姓名</td>
+				<td>户主姓名</td>
 				<td><input id="trueName"></td>
-				<td>性别</td>
+				<td>职&nbsp;&nbsp;&nbsp;业</td>
+				<td><input id="profession"></td>
+			</tr>
+			<tr>
+				<td>性&nbsp;&nbsp;&nbsp;别</td>
 				<td><select><option value="0">女</option><option value="1">男</option></select></td>
-				<td>年龄</td>
+				<td>年&nbsp;&nbsp;&nbsp;龄</td>
 				<td><select id="age"   name="age" >
 <option value="0"></option>
         <option value="wdd">10</option>
@@ -116,7 +126,7 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
 				
 			</tr>
 			<tr>
-				<td>身高</td>
+				<td>身&nbsp;&nbsp;&nbsp;高</td>
 				<td>
 				<select id="height"   name="height" >
 <option value="0"></option>
@@ -137,7 +147,7 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
         <option value="wdd">185</option>
         <option value="wdd">187</option>
 </select>cm</td>
-				<td>体重</td>
+				<td>体&nbsp;&nbsp;&nbsp;重</td>
 				<td>
 				<select id="weight"   name="weight" >
 <option value="0"></option>
@@ -158,12 +168,15 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
         <option value="wdd">82</option>
         <option value="wdd">87</option>
 </select>kg</td>
-				<td>血型</td>
-				<td><select><option value="A型">A型</option><option value="B型">B型</option><option value="AB型">AB型</option><option value="O型">O型</option></select></td>
+				
 			</tr>
 			<tr>
-				<td>籍贯</td>
+				<td>血&nbsp;&nbsp;&nbsp;型</td>
+				<td><select><option value="A型">A型</option><option value="B型">B型</option><option value="AB型">AB型</option><option value="O型">O型</option></select></td>
+				<td>籍&nbsp;&nbsp;&nbsp;贯</td>
 				<td><input id="nativePlace"></td>
+			</tr>
+			<tr>	
 				<td>出生日期</td>
 				<td><input id="birthdate"></td>
 				<td>身份证号</td>
@@ -172,26 +185,36 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
 			<tr>
 				<td>电话号码</td>
 				<td><input id="telNumber"></td>
-				<td>地址</td>
-				<td><input id="address"></td>
-				<td>职业</td>
-				<td><input id="profession"></td>
+				<td>家庭地址</td>
+				<td >
+					<input type="text" id="address">
+				</td>
+				
 			</tr>
 			<tr>
 				<td>档案编号</td>
 				<td><input id="fileNum"></td>
 				<td>家庭编号</td>
 				<td><input id="familyNum"></td>
-				<td>医疗证号</td>
-				<td><input id="medicalCard"></td>
-			</tr></tr>
-			
-			
+				
+			</tr>
 			
 			<tr>
-				<td>备注</td>
+				<td>医疗证号</td>
+				<td><input id="fileNum"></td>
+				<td>家庭人数</td>
+				<td><input id="familyNum"></td>
+			</tr>
+			<tr>	
+				<td>户编号</td>
+				<td><input id="medicalCard"></td>
+				<td>户属性</td>
+				<td><input id="medicalCard"></td>
+			</tr>
+			<tr>
+				<td>备&nbsp;&nbsp;&nbsp;注</td>
 				<td colspan="4">
-					<input type="text" id="address" name="user.address" class="easyui-validatebox" required="true" style="width: 400px;"/>
+					<input type="text" id="address" name="user.address" class="easyui-validatebox" required="true" style="width: 405px;"/>
 				</td>
 			</tr>
 <tr>	
@@ -208,8 +231,8 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
 				<td>建档日期</td>
 				<td><input id="createDate"  type="text" name="createDate" onclick="showtime();" /></td>
 				<span id="createDate_msg"></span><br>
-			<!-- </tr>
-			<tr>  -->
+		    </tr>
+			<tr>  
 				<td>录入员</td>
 				<td>
 				<select id="keyBorder"   name="keyBorder" >
@@ -220,16 +243,14 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
         <option value="wdd">王雪</option>
 </select></td>
 			</tr>
-			<tr>
-				<tr><td></td></tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><input value="重置" type="button" onclick="reset();">&nbsp;&nbsp;<input value="提交" type="button" onclick="submit();"></td>
-				<td></td>
-				<td></td>
-			</tr>
+			
 		</table>
+		<br>
+		<input value="重置" type="button" onclick="reset();">&nbsp;&nbsp;<input value="提交" type="button" onclick="submit();">
+		</td>
+<!--  </tr>   
+</table> -->
+		</fieldset>
 </center>
 <input type="hidden" id="id" value="<%=id%>">
 </body>

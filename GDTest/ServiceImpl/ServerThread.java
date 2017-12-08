@@ -77,5 +77,4 @@ public class ServerThread implements Runnable {
 		}	
 		return listSuper;
 	}
-
 }

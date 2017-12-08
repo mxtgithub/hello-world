@@ -20,7 +20,7 @@
 
 			<input type="button" value="新增" onclick="newPerson();">
 			
-			<table cellpadding="0" cellspacing="0" border="1px" id="content" style="margin-top: 20px;">
+			<table cellpadding="0" cellspacing="0" border="1px" id="content" style="margin-top: 20px;width:80%;">
 				<tr>
 					<th>编号</th>
 					<th>姓名</th>

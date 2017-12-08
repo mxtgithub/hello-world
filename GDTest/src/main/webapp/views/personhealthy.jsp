@@ -14,13 +14,17 @@
 <title>个人健康档案</title>
 </head>
 <body>
-	<center>
-		<div id="div3">
-			<a href="/GDTest/views/first.jsp">首页</a><h3>个人健康档案</h3>
-
-			<input type="button" value="新增" onclick="newPerson();">
+<!-- <td><a href="/GDTest/views/first.jsp"></a>返回<br></td> -->
+ <input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:健康档案管理》个人健康档案</td></br> 
+<center>
+	
+		<div style="width:100%;id="div3">
+			<h3>个人健康档案</h3>
+档案编号：    <input type="text" name="listid"><input type="submit" value="检索">
+	<input type="button" value="新增" onclick="newPerson();">
 			
-			<table cellpadding="0" cellspacing="0" border="1px" id="content" style="margin-top: 20px;">
+			
+			<table cellpadding="0" cellspacing="0" border="1px" id="content" style="margin-top: 20px;width:80%;">
 				<tr>
 					<th>编号</th>
 					<th>姓名</th>

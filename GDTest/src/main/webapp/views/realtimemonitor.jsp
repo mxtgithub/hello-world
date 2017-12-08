@@ -151,7 +151,7 @@
                     out.print(rs.getString(11));    
                 %>    
             </td>  --%>
-            <th><input type="button" value="查看历史心率数据" onclick="edit(1)"> 
+            <th><a href="realtimemonitorHighchart.jsp"><input type="button" value="查看历史心率数据" onclick="edit(1)"> 
             <input type="button" value="下载" onclick="edit(1)"></th>        
         </tr>  
          

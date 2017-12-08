@@ -38,12 +38,13 @@
     </script>
   </head>
   
-  <body>
-  <div id="div1" style="border:3px solid  #000">
-	<h1 style="color:#f000f0">社区医疗信息系统平台</h1>
-	<div id="Layer1" style="position:absolute;
-	 width:100%; height:100%; z-index:-1">    
-    </div>
+<body>
+<div id="div1" style="width:98%;border:3px solid  #000" >
+<center><h1 style="color:#f000f0">社区医疗信息系统平台</h1></center>
+<%-- <img src="${pageContext.request.contextPath}/images/88888.jpg"/> --%>
+<!-- <div id="Layer1" style="position:absolute;
+ width:90%; height:100%; z-index:-1">    
+</div> -->
 <p  id="" style="float:right;"><span id="idNumber">${idNumber}</span>&nbsp;用户登录成功！&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> 
 <p  id="name" style="float:right;">恭喜&nbsp;${name}&nbsp;</p>
 <c:if test="${user==null}">
@@ -55,7 +56,9 @@
 		&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input type="button" value="退出系统" onclick="doLogout()"><br>		
 	</c:if>
 	<hr/>
-
+ <table  border="1" >
+ <tr>
+ <td width="180" height=""> 
 <a href="<%=request.getContextPath()%>/healthy"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black" >健康档案管理</font></a>		
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="<%=request.getContextPath()%>/views/personhealthy.jsp"><font color = "black">个人健康档案</font></a>
@@ -67,11 +70,9 @@
 <a href="<%=request.getContextPath()%>/views/pregnancyhealthy.jsp"><font color = "black">孕产妇健康档案</font></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="<%=request.getContextPath()%>/views/olderhealthy.jsp"><font color = "black">老年人健康档案</font></a><br>
-
-
 <a href="<%=request.getContextPath()%>/protect"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black">健康监测管理</font></a>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">数据通信</font></a>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="communication.jsp"><font color = "black">实时监测</font></a><br>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="communication.jsp"><font color = "black">数据通信</font></a>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="views/realtimemonitor.jsp"><font color = "black">实时监测</font></a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">诊断预防</font></a><br>
 
 <a href="<%=request.getContextPath()%>/select"><IMG height=16 src="/GDTest/images/arrow.gif" width=8><font color = "black">数据信息管理</font></a>
@@ -97,6 +98,14 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->	
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<%=request.getContextPath()%>/system"><font color = "black">用户权限管理</font></a><br>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 
+</td>    
+<td width="1175" height="500">
+<iframe name="left" id="main_left" src="views/personhealthy.jsp" frameborder="false" scrolling="auto" style="border:none;
+" width="100%" height="520" allowtransparency="true"></iframe>
+<a href='personhealthy.jsp' target="right"></a>
+</td>
+ </tr>   
+</table>
 </body>
 </div>
 </html>
