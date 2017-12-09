@@ -31,7 +31,7 @@
 <h3>实测心电信号数据管理</h3>
 
 <center>
- <table cellpadding="0" cellspacing="0" border="1px">
+ <table cellpadding="0" cellspacing="0" border="1px" style="margin-top: 20px;width:80%;">
    <tr>
     <th>编号</th>
    <th>姓名</th>

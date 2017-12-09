@@ -13,7 +13,7 @@
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-<title>新增个人健康档案页面</title>
+<title>新增高血压病例</title>
 <script type="text/javascript" src="/GDTest/css/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="/GDTest/css/upfile.js"></script>
 <script type="text/javascript">
@@ -77,10 +77,10 @@ document.getElementById("createDate").value = year + "年" + month + "月" + dat
 }  
 //input输入框 长度自适应
 </script>
-<script type="text/javascript" src="/GDTest/js/insertPersonHealthyPage.js"></script>
+<script type="text/javascript" src="/GDTest/js/insertBloodmanagePage.js"></script>
 </head>
 <body>
-<center><a href="/GDTest/views/personhealthy.jsp">返回</a><h3 id="title" style="margin-top: 80px;">新增个人健康档案</h3>
+<center><a href="/GDTest/views/bloodmanage.jsp">返回</a><h3 id="title" style="margin-top: 80px;">新增高血压病例</h3>
 	<table>
 			<tr>
 				<td>用户名</td>

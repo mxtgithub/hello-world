@@ -39,7 +39,7 @@
 	 String sql = "SELECT * FROM " + tableName;  
 	 ResultSet rs = statement.executeQuery(sql); 
 %>
-</br>
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:远程监测管理》实时监测</td></br></br>
 <fieldset>
 <legend>心率实时监测</legend>
 <table align="left">    
@@ -71,12 +71,22 @@
             </th>     
             <th>    
                 <%    
-                    out.print("实时血压");    
+                    out.print("血压"+"/mmHg");    
+                %>    
+            </th> 
+                        <th>    
+                <%    
+                    out.print("血氧"+"/%");    
                 %>    
             </th>  
             <th>    
                 <%    
-                    out.print("实时心率");    
+                    out.print("心率"+"/bpm");    
+                %>    
+            </th> 
+                        <th>    
+                <%    
+                    out.print("体温"+"/℃");    
                 %>    
             </th> 
             <th align="center">    
@@ -84,18 +94,7 @@
                     out.print("疾病史");    
                 %>    
             </th> 
-<%--             <th align="center">    
-                <%    
-                    out.print("备注");    
-                %>    
-            </th>  --%>
-<%--             <th align="center">    
-                <%    
-                    out.print("时间");    
-                %>    
-            </th>  --%>
             <th>操作</th>
-           
         </tr>    
         <%    
             while (rs.next()) {    
@@ -111,22 +110,22 @@
                     out.print(rs.getString(3));    
                 %>    
             </td>    
-            <td width="80" align="center">    
+            <td width="60" align="center">    
                 <%    
                     out.print(rs.getString(4));    
                 %>    
             </td>  
-            <td width="100" align="center">    
+            <td width="60" align="center">    
                 <%    
                     out.print(rs.getString(5));    
                 %>    
             </td>  
-            <td width="100" align="center">    
+            <td width="70" align="center">    
                 <%    
                     out.print(rs.getString(6));    
                 %>    
             </td> 
-             <td width="80" align="center">    
+             <td width="110" align="center">    
                 <%    
                     out.print(rs.getString(7));    
                 %>    
@@ -136,22 +135,23 @@
                     out.print(rs.getString(8));    
                 %>    
             </td>  
-            <td  width="120" align="center">    
+            <td  width="100" align="center">    
                 <%    
                     out.print(rs.getString(9));    
                 %>    
-            </td>   
-<%--             <td  width="180" align="center">    
+            </td> 
+            <td  width="70" align="center">    
                 <%    
                     out.print(rs.getString(10));    
                 %>    
-            </td>  --%>
-<%--             <td  width="180" align="center">    
+            </td>
+            <td  width="120" align="center">    
                 <%    
                     out.print(rs.getString(11));    
                 %>    
-            </td>  --%>
+            </td>  
             <th><a href="realtimemonitorHighchart.jsp"><input type="button" value="查看历史心率数据" onclick="edit(1)"> 
+            <input type="button" value="详情" onclick="edit(1)">
             <input type="button" value="下载" onclick="edit(1)"></th>        
         </tr>  
          

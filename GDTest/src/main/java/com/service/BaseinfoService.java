@@ -7,6 +7,7 @@ import com.dto.Baseinfo;
 public interface BaseinfoService {
 	List<Baseinfo>  getAll(Baseinfo baseinfo);
 	int delete(Long  id);
-	int insert(Baseinfo baseinfo);
-	int update(Baseinfo baseinfo);
+	boolean insert(Baseinfo baseinfo);
+	boolean update(Baseinfo baseinfo);
+	Baseinfo selectByPrimaryKey(Baseinfo baseinfo);
 }

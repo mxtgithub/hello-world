@@ -19,7 +19,7 @@
 </script>
 </head>
 <body>
-
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:数据信息管理》用户数据管理</td></br></br>
 <center>
 
 <div id="div3">
@@ -46,7 +46,7 @@
    <th> <input  id="txt" size="1" value="${tom.gender}" style="border-style:none"  readonly/></th>
    <th> <input  id="txt" size="1" value="${tom.age}" style="border-style:none"  readonly/></th>
    <th> <input  id="txt" size="16" value="${tom.idNumber}" style="border-style:none"  readonly/></th>
-   <th> <input  id="txt" size="7" value="${tom.telNumber}" style="border-style:none"  readonly/></th>
+   <th> <input  id="txt" size="9" value="${tom.telNumber}" style="border-style:none"  readonly/></th>
    <th> <input  id="txt" size="36" value="${tom.address}" style="border-style:none" readonly/></th>
    <th> <input  id="txt" size="20" value="${tom.attribute}" style="border-style:none" readonly/></th>
   <th>

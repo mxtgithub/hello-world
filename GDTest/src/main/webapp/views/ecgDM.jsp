@@ -18,10 +18,10 @@
 </script>
 </head>
 <body>
-
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:数据信息管理》数据信息操作》数据信息查询</td></br></br>
 <center>
 <div id="div3">
-<h3>数据信息管理</h3>
+<h3>数据信息查询</h3>
 
 
  <table cellpadding="0" cellspacing="0" border="1px">

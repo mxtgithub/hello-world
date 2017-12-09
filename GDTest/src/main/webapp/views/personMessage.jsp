@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="/GDTest/css/person.css">
+<a  href="views/first.jsp">返回</a></br>
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:数据信息管理》用户数据处理》显示患者信息</td>
 <script type="text/javascript" src="/GDTest/js/cookie_util.js"></script>
 <script type="text/javascript" src="/GDTest/js/jquery-1.11.0.js"></script>
 
@@ -35,12 +37,10 @@
 
 <title>患者信息</title>
 </head>
-
 <body>
-	<a  href="views/first.jsp">首页</a>
-	
-	<h1>显示患者信息</h1>
-	<table border="1" cellspacing="0">
+<center>
+	<h2>显示患者信息</h2>
+	<table border="1" cellspacing="0" style="margin-top: 20px;width:60%;">
 		  <tr>
 		    <th>编号</th>
 		    <th>身份证</th>
@@ -79,12 +79,8 @@
 		    </th>
 		  </tr>
  </c:forEach>
- 
- 
  <%//} %>
  	</table>
- 	
-	
 <a href="<%=request.getContextPath()%>/upPage_userDM/${page}">
 <input type="button" value="上一页"/>
 </a>
@@ -92,10 +88,6 @@ ${page}
 <a href="<%=request.getContextPath()%>/downPage_userDM/${page}">
 <input type="button" value="下一页"/>
 </a>
-
-	
- 	
- 	
- 	
+</center>
 </body>
 </html>

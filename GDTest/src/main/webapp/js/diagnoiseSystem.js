@@ -1,31 +1,30 @@
-var id = $("#id").val();
 $(function(){
-	id=$("#id").val();
-	if(null!=id&&""!=id&&"null"!=id){
-		init(id);
-		$("#title").html("修改家庭健康档案");
-	}
+	init(1);
 });
 
-function init(_id){
+function init(_pageNo){
+	$("tr[name=infoTr]").remove();
 	$.ajax({
 		dataType : "json",
 		type : "POST",
 		async:false,
-		url : window.contextPath+"/queryBaseinfo?id="+_id,
+		url : window.contextPath+"/queryBaseinfoList?page="+_pageNo,
 		success : function(data) {
 			if(data.result=="success"){
 				
-				var list = data.list;alert(JSON.stringify(data));
+				var list = data.list;//alert(JSON.stringify(data));
 				var html = "";
-				/*for(var i=0;i<list.length;i++){
-					html = html + "<tr name='infoTr'><th>" + list[i].id + "</th>" + 
+				for(var i=0;i<list.length;i++){
+					html = html + "<tr name='infoTr'><th>" + list[i].id + "</th>" +
 								  "<th>" + list[i].truename + "</th>" + 
 								  "<th>" + list[i].gender + "</th>" + 
 								  "<th>" + list[i].age + "</th>" + 
 								  "<th>" + list[i].idnumber + "</th>" + 
+/*								  "<th>" + list[i].address + "</th>" +
 								  "<th>" + list[i].telnumber + "</th>" +
-								  "<th><input type='button' value='修改' onclick='edit(" + list[i].id + ")'/><input type='button' value='删除'/></th></tr>";
+								  "<th>" + list[i].buildAchive + "</th>" +
+								  "<th>" + list[i].buildDate + "</th>" +*/
+								  "<th><input type='button' value='自动诊断' onclick='edit(" + list[i].id + ")'/></th></tr>";
 				}
 				$("#content").append(html);
 				$("#pageNo").html(data.pageNo);
@@ -38,11 +37,18 @@ function init(_id){
 					
 				}else{
 					$("#downPage").attr("onclick", "init("+(_pageNo+1)+");");
-				}*/
+				}
 				
 			}else{
 				alert(data.errorMsg);
 			} 
 		}
 	});
+}
+function newPerson(){
+	top.location.href=window.contextPath+"/views/treatment.jsp";
+}
+
+function edit(_id){
+	top.location.href=window.contextPath+"/views/treatment.jsp?id="+_id;
 }

@@ -8,21 +8,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
     <title>显示历史心率数据</title>
-    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-
+	<link rel="stylesheet" type="text/css"  href="/GDTest/css/person.css" />
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:远程监测管理》历史心率监测图表</td></br></br>
   <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
   <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
   <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
    </head>
   <body>
-  <div id="container" stytle="min-width:400px;height:400px"></div>
+  <div id="container" stytle="min-width:200px;height:200px"></div>
+  
   <script>
   /**
   * Highcharts 在 4.2.0 开始已经不依赖 jQuery 了，直接用其构造函数既可创建图表
@@ -57,15 +57,22 @@ var chart = new Highcharts.Chart('container', {
     },
     series: [{
         name: '马晓婷',
-        data: [76,75,78, 89,70,84,86,98,78,88,79,75,76, 89, 97, 96, 80, 83, 88, 90, 76, 77, 78]
+        data: [86,85,87, 86,85,84,86,98,87,86,79,75,76, 87, 97, 86, 80, 83, 88, 87, 86, 87, 88]
     }, {
     }]
 });
   </script>
 <center>
-        <%out.print("时间");%><br>
+        <%out.print("时间");%>
+        <%out.print("（");%>
         <span><%SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
 		out.println(df.format(new Date()));// new Date()为获取当前系统时间 %></span>
+		<%out.print("）");%>
+        <br>
+       	 异常心率次数：<input type="text" name="listid">
+       	 正常心率次数：<input type="text" name="listid">
+       	 心率最高值：<input type="text" name="listid">
+       	 心率最低值：<input type="text" name="listid">
 </center>
   </body>
 </html>

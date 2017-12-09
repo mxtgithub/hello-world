@@ -1,8 +1,10 @@
 var id = $("#id").val();
 $(function(){
 	id=$("#id").val();
-	init(id);
-	
+	if(null!=id&&""!=id&&"null"!=id){
+		init(id);
+		$("#title").html("修改老年人健康档案");
+	}
 });
 
 function init(_id){

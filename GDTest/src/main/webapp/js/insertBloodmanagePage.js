@@ -2,13 +2,13 @@ var id = $("#id").val();
 $(function(){
 	id=$("#id").val();
 	if(null!=id&&""!=id&&"null"!=id){
-		init(id);
-		$("#title").html("修改个人健康档案");
+		//init(id);
+		$("#title").html("修改高血压病例");
 	}
 });
 
 function init(_id){
-	$.ajax({
+	/*$.ajax({
 		dataType : "json",
 		type : "POST",
 		async:false,
@@ -43,11 +43,11 @@ function init(_id){
 				alert(data.errorMsg);
 			} 
 		}
-	});
+	});*/
 }
 
 function submit(){
-	var username = $("#userName").val();
+	/*var username = $("#userName").val();
 	var identity = $("#identity").val();
 	var truename = $("#trueName").val();
 	var gender = $("#gender").val();
@@ -111,7 +111,7 @@ function submit(){
 				alert(data.errorMsg);
 			} 
 		}
-	});
+	});*/
 }
 
 function dateFmt(_dateStr){

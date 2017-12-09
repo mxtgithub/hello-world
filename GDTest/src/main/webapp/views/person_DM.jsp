@@ -19,13 +19,14 @@
 </script>
 </head>
 <body>
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:数据信息管理》数据信息操作</td></br></br>
 <center>
 <div id="div3">
 <h3>数据操作功能页面</h3>
 
 <!--  <a href="<%=request.getContextPath()%>/insertPage">新增 </a>  -->
 
-  <table cellpadding="0" cellspacing="0" border="1px">
+  <table cellpadding="0" cellspacing="0" border="1px" id="content" style="margin-top: 20px;width:90%;">
    <tr>
     <th>编号</th>
    <th>姓名</th>
@@ -47,7 +48,7 @@
    <th> <input  id="txt" size="20" value="${tom.idNumber}" style="border-style:none"  readonly/></th>
    <th> <input  id="txt" size="10" value="${tom.telNumber}" style="border-style:none"  readonly/></th>
    <th> <input  id="txt" size="36" value="${tom.address}" style="border-style:none" readonly/></th>
-   <th> <input  id="txt" size="20" value="${tom.attribute}" style="border-style:none" readonly/></th>
+   <th> <input  id="txt" size="10" value="${tom.attribute}" style="border-style:none" readonly/></th>
   <th>
   
  <a href="<%=request.getContextPath() %>/getEcg/${tom.idNumber}">

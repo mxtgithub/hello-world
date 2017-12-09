@@ -24,13 +24,14 @@
     </script>
 </head>
 <body>
+<input type="" value="" size="1"/><td href="/GDTest/views/first.jsp">当前功能:数据信息管理》用户数据查询》个人数据管理</td></br></br>
 <center>
 <div id="div3">
 <h3>个人数据管理</h3>
 <!-- ${person}    -->
 
 
- <table cellpadding="0" cellspacing="0" border="1px">
+ <table cellpadding="0" cellspacing="0" border="1px" id="content" style="margin-top: 20px;width:90%;">
    <tr>
     <th>编号</th>
    <th>姓名</th>

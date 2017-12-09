@@ -9,20 +9,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>慢性病</title>
+    <title>My JSP 'ecgPictures.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+
+	<link rel="stylesheet" type="text/css" href="css/person.css">
+
 
   </head>
   
   <body>
-    This is my JSP page. <br>
+  	<img src="images/yuanshiecg.jpg"/> 
+    <!-- <img src="images/xianxingchazhi.jpg"/> 
+    <img src="images/zhenduanbaogao.jpg"/>  -->
   </body>
 </html>
